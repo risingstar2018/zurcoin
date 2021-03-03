@@ -1,172 +1,135 @@
-Zur Core version 0.10.4 is now available from:
+Bitcoin Core version 0.18.1 is now available from:
 
-  <https://bitcoin.org/bin/bitcoin-core-0.10.4/>
+  <https://bitcoincore.org/bin/bitcoin-core-0.18.1/>
 
-This is a new minor version release, bringing bug fixes, the BIP65
-(CLTV) consensus change, and relay policy preparation for BIP113. It is
-recommended to upgrade to this version as soon as possible.
+This is a new minor version release, including new features, various bug
+fixes and performance improvements, as well as updated translations.
 
-Please report bugs using the issue tracker at github:
+Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/zur-project/zur/issues>
+  <https://github.com/bitcoin/bitcoin/issues>
 
-Upgrading and downgrading
-=========================
+To receive security and update notifications, please subscribe to:
+
+  <https://bitcoincore.org/en/list/announcements/join/>
 
 How to Upgrade
---------------
+==============
 
-If you are running an older version, shut it down. Wait until it has completely
-shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/Zur-Qt (on Mac) or
-zurd/zur-qt (on Linux).
+If you are running an older version, shut it down. Wait until it has
+completely shut down (which might take a few minutes for older
+versions), then run the installer (on Windows) or just copy over
+`/Applications/Bitcoin-Qt` (on Mac) or `bitcoind`/`bitcoin-qt` (on
+Linux).
 
-Downgrade warning
-------------------
+The first time you run version 0.15.0 or newer, your chainstate database
+will be converted to a new format, which will take anywhere from a few
+minutes to half an hour, depending on the speed of your machine.
 
-Because release 0.10.0 and later makes use of headers-first synchronization and
-parallel block download (see further), the block files and databases are not
-backwards-compatible with pre-0.10 versions of Zur Core or other software:
+Note that the block database format also changed in version 0.8.0 and
+there is no automatic upgrade code from before version 0.8 to version
+0.15.0 or later. Upgrading directly from 0.7.x and earlier without
+redownloading the blockchain is not supported.  However, as usual, old
+wallet versions are still supported.
 
-* Blocks will be stored on disk out of order (in the order they are
-received, really), which makes it incompatible with some tools or
-other programs. Reindexing using earlier versions will also not work
-anymore as a result of this.
+Compatibility
+==============
 
-* The block index database will now hold headers for which no block is
-stored on disk, which earlier versions won't support.
+Bitcoin Core is supported and extensively tested on operating systems
+using the Linux kernel, macOS 10.10+, and Windows 7 and newer. It is not
+recommended to use Bitcoin Core on unsupported systems.
 
-If you want to be able to downgrade smoothly, make a backup of your entire data
-directory. Without this your node will need start syncing (or importing from
-bootstrap.dat) anew afterwards. It is possible that the data from a completely
-synchronised 0.10 node may be usable in older versions as-is, but this is not
-supported and may break as soon as the older version attempts to reindex.
+Bitcoin Core should also work on most other Unix-like systems but is not
+as frequently tested on them.
 
-This does not affect wallet forward or backward compatibility. There are no
-known problems when downgrading from 0.11.x to 0.10.x.
+From 0.17.0 onwards, macOS <10.10 is no longer supported. 0.17.0 is
+built using Qt 5.9.x, which doesn't support versions of macOS older than
+10.10. Additionally, Bitcoin Core does not yet change appearance when
+macOS "dark mode" is activated.
 
-Notable changes since 0.10.3
-============================
+Known issues
+============
 
-BIP65 soft fork to enforce OP_CHECKLOCKTIMEVERIFY opcode
---------------------------------------------------------
+Wallet GUI
+----------
 
-This release includes several changes related to the [BIP65][] soft fork
-which redefines the existing OP_NOP2 opcode as OP_CHECKLOCKTIMEVERIFY
-(CLTV) so that a transaction output can be made unspendable until a
-specified point in the future.
+For advanced users who have both (1) enabled coin control features, and
+(2) are using multiple wallets loaded at the same time: The coin control
+input selection dialog can erroneously retain wrong-wallet state when
+switching wallets using the dropdown menu. For now, it is recommended
+not to use coin control features with multiple wallets loaded.
 
-1. This release will only relay and mine transactions spending a CLTV
-   output if they comply with the BIP65 rules as provided in code.
-
-2. This release will produce version 4 blocks by default. Please see the
-   *notice to miners* below.
-
-3. Once 951 out of a sequence of 1,001 blocks on the local node's best block
-   chain contain version 4 (or higher) blocks, this release will no
-   longer accept new version 3 blocks and it will only accept version 4
-   blocks if they comply with the BIP65 rules for CLTV.
-
-For more information about the soft-forking change, please see
-<https://github.com/bitcoin/bitcoin/pull/6351>
-
-Graphs showing the progress towards block version 4 adoption may be
-found at the URLs below:
-
-- Block versions over the last 50,000 blocks as progress towards BIP65
-  consensus enforcement: <http://bitcoin.sipa.be/ver-50k.png>
-
-- Block versions over the last 2,000 blocks showing the days to the
-  earliest possible BIP65 consensus-enforced block: <http://bitcoin.sipa.be/ver-2k.png>
-
-**Notice to miners:** Zur Core’s block templates are now for
-version 4 blocks only, and any mining software relying on its
-getblocktemplate must be updated in parallel to use libblkmaker either
-version FIXME or any version from FIXME onward.
-
-- If you are solo mining, this will affect you the moment you upgrade
-  Zur Core, which must be done prior to BIP65 achieving its 951/1001
-  status.
-
-- If you are mining with the stratum mining protocol: this does not
-  affect you.
-
-- If you are mining with the getblocktemplate protocol to a pool: this
-  will affect you at the pool operator’s discretion, which must be no
-  later than BIP65 achieving its 951/1001 status.
-
-[BIP65]: https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki
-
-Windows bug fix for corrupted UTXO database on unclean shutdowns
-----------------------------------------------------------------
-
-Several Windows users reported that they often need to reindex the
-entire blockchain after an unclean shutdown of Zur Core on Windows
-(or an unclean shutdown of Windows itself). Although unclean shutdowns
-remain unsafe, this release no longer relies on memory-mapped files for
-the UTXO database, which significantly reduced the frequency of unclean
-shutdowns leading to required reindexes during testing.
-
-For more information, see: <https://github.com/bitcoin/bitcoin/pull/6917>
-
-Other fixes for database corruption on Windows are expected in the
-next major release.
-
-0.10.4 Change log
+0.18.1 change log
 =================
 
-Detailed release notes follow. This overview includes changes that affect
-behavior, not code moves, refactors and string updates. For convenience in locating
-the code changes and accompanying discussion, both the pull request and
-git merge commit are mentioned.
+### P2P protocol and network code
+- #15990 Add tests and documentation for blocksonly (MarcoFalke)
+- #16021 Avoid logging transaction decode errors to stderr (MarcoFalke)
+- #16405 fix: tor: Call `event_base_loopbreak` from the event's callback (promag)
+- #16412 Make poll in InterruptibleRecv only filter for POLLIN events (tecnovert)
 
-- #6953 `8b3311f` alias -h for --help
-- #6953 `97546fc` Change URLs to https in debian/control
-- #6953 `38671bf` Update debian/changelog and slight tweak to debian/control
-- #6953 `256321e` Correct spelling mistakes in doc folder
-- #6953 `eae0350` Clarification of unit test build instructions
-- #6953 `90897ab` Update bluematt-key, the old one is long-since revoked
-- #6953 `a2f2fb6` build: disable -Wself-assign
-- #6953 `cf67d8b` Bugfix: Allow mining on top of old tip blocks for testnet (fixes testnet-in-a-box use case)
-- #6953 `b3964e3` Drop "with minimal dependencies" from description
-- #6953 `43c2789` Split bitcoin-tx into its own package
-- #6953 `dfe0d4d` Include bitcoin-tx binary on Debian/Ubuntu
-- #6953 `612efe8` [Qt] Raise debug window when requested
-- #6953 `3ad96bd` Fix locking in GetTransaction
-- #6953 `9c81005` Fix spelling of Qt
-- #6946 `94b67e5` Update LevelDB
-- #6706 `5dc72f8` CLTV: Add more tests to improve coverage
-- #6706 `6a1343b` Add RPC tests for the CHECKLOCKTIMEVERIFY (BIP65) soft-fork
-- #6706 `4137248` Add CHECKLOCKTIMEVERIFY (BIP65) soft-fork logic
-- #6706 `0e01d0f` Enable CHECKLOCKTIMEVERIFY as a standard script verify flag
-- #6706 `6d01325` Replace NOP2 with CHECKLOCKTIMEVERIFY (BIP65)
-- #6706 `750d54f` Move LOCKTIME_THRESHOLD to src/script/script.h
-- #6706 `6897468` Make CScriptNum() take nMaxNumSize as an argument
-- #6867 `5297194` Set TCP_NODELAY on P2P sockets
-- #6836 `fb818b6` Bring historical release notes up to date
-- #6852 `0b3fd07` build: make sure OpenSSL heeds noexecstack
+### Wallet
+- #15913 Add -ignorepartialspends to list of ignored wallet options (luke-jr)
+
+### RPC and other APIs
+- #15991 Bugfix: fix pruneblockchain returned prune height (jonasschnelli)
+- #15899 Document iswitness flag and fix bug in converttopsbt (MarcoFalke)
+- #16026 Ensure that uncompressed public keys in a multisig always returns a legacy address (achow101)
+- #14039 Disallow extended encoding for non-witness transactions (sipa)
+- #16210 add 2nd arg to signrawtransactionwithkey examples (dooglus)
+- #16250 signrawtransactionwithkey: report error when missing redeemScript/witnessScript (ajtowns)
+
+### GUI
+- #16044 fix the bug of OPEN CONFIGURATION FILE on Mac (shannon1916)
+- #15957 Show "No wallets available" in open menu instead of nothing (meshcollider)
+- #16118 Enable open wallet menu on setWalletController (promag)
+- #16135 Set progressDialog to nullptr (promag)
+- #16231 Fix open wallet menu initialization order (promag) 
+- #16254 Set `AA_EnableHighDpiScaling` attribute early (hebasto) 
+- #16122 Enable console line edit on setClientModel (promag) 
+- #16348 Assert QMetaObject::invokeMethod result (promag)
+
+### Build system
+- #15985 Add test for GCC bug 90348 (sipa)
+- #15947 Install bitcoin-wallet manpage (domob1812)
+- #15983 build with -fstack-reuse=none (MarcoFalke)
+
+### Tests and QA
+- #15826 Pure python EC (sipa)
+- #15893 Add test for superfluous witness record in deserialization (instagibbs)
+- #14818 Bugfix: test/functional/rpc_psbt: Remove check for specific error message that depends on uncertain assumptions (luke-jr)
+- #15831 Add test that addmultisigaddress fails for watchonly addresses (MarcoFalke)
+
+### Documentation
+- #15890 Remove text about txes always relayed from -whitelist (harding)
+
+### Miscellaneous
+- #16095 Catch by reference not value in wallettool (kristapsk)
+- #16205 Replace fprintf with tfm::format (MarcoFalke)
 
 Credits
 =======
 
 Thanks to everyone who directly contributed to this release:
 
-- Alex Morcos
-- Daniel Cousens
-- Diego Viola
-- Eric Lombrozo
-- Esteban Ordano
-- Gregory Maxwell
+- Andrew Chow
+- Anthony Towns
+- Chris Moore
+- Daniel Kraft
+- David A. Harding
+- fanquake
+- Gregory Sanders
+- Hennadii Stepanov
+- John Newbery
+- Jonas Schnelli
+- João Barbosa
+- Kristaps Kaupe
 - Luke Dashjr
 - MarcoFalke
-- Matt Corallo
-- Micha
-- Mitchell Cash
-- Peter Todd
+- MeshCollider
 - Pieter Wuille
+- shannon1916
+- tecnovert
 - Wladimir J. van der Laan
-- Zak Wilcox
-
-And those who contributed additional code review and/or security research.
 
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
