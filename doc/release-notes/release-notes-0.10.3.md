@@ -1,13 +1,13 @@
-Bitcoin Core version 0.10.3 is now available from:
+Zurcoin Core version 0.10.3 is now available from:
 
-  <https://bitcoin.org/bin/bitcoin-core-0.10.3/>
+  <https://zurcoin.org/bin/bitcoin-core-0.10.3/>
 
 This is a new minor version release, bringing security fixes and translation 
 updates. It is recommended to upgrade to this version as soon as possible.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/bitcoin/bitcoin/issues>
+  <https://github.com/zurcoin/zurcoin/issues>
 
 Upgrading and downgrading
 =========================
@@ -17,7 +17,7 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/Bitcoin-Qt (on Mac) or
+installer (on Windows) or just copy over /Applications/Zurcoin-Qt (on Mac) or
 bitcoind/bitcoin-qt (on Linux).
 
 Downgrade warning
@@ -25,7 +25,7 @@ Downgrade warning
 
 Because release 0.10.0 and later makes use of headers-first synchronization and
 parallel block download (see further), the block files and databases are not
-backwards-compatible with pre-0.10 versions of Bitcoin Core or other software:
+backwards-compatible with pre-0.10 versions of Zurcoin Core or other software:
 
 * Blocks will be stored on disk out of order (in the order they are
 received, really), which makes it incompatible with some tools or
@@ -60,7 +60,7 @@ using distribution provided packages.
 Additionally, upnp has been disabled by default. This may result in a lower
 number of reachable nodes on IPv4, however this prevents future libupnpc
 vulnerabilities from being a structural risk to the network
-(see https://github.com/bitcoin/bitcoin/pull/6795).
+(see https://github.com/zurcoin/zurcoin/pull/6795).
 
 Test for LowS signatures before relaying
 -----------------------------------------
@@ -82,7 +82,7 @@ permitted. Even BIP62 did not propose applying this rule to
 old version transactions, but conforming implementations have become
 much more common since BIP62 was initially written.
 
-Bitcoin Core has produced compatible signatures since a28fb70e in
+Zurcoin Core has produced compatible signatures since a28fb70e in
 September 2013, but this didn't make it into a release until 0.9
 in March 2014; Bitcoinj has done so for a similar span of time.
 Bitcoinjs and electrum have been more recently updated.
@@ -92,7 +92,7 @@ still cooperate to break transactions.  Nor does it replace the
 need for wallet software to handle malleability sanely[1]. This
 only eliminates the cheap and irritating DOS attack.
 
-[1] On the Malleability of Bitcoin Transactions
+[1] On the Malleability of Zurcoin Transactions
 Marcin Andrychowicz, Stefan Dziembowski, Daniel Malinowski, Łukasz Mazurek
 http://fc15.ifca.ai/preproceedings/bitcoin/paper_9.pdf
 
@@ -107,7 +107,7 @@ outrageous memory usage on nodes due to the mempool ballooning. This is a
 temporary measure, bridging the time until a dynamic method for determining
 this fee is merged (which will be in 0.12).
 
-(see https://github.com/bitcoin/bitcoin/pull/6793, as well as the 0.11.0
+(see https://github.com/zurcoin/zurcoin/pull/6793, as well as the 0.11.0
 release notes, in which this value was suggested)
 
 0.10.3 Change log

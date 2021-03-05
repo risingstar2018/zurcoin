@@ -36,7 +36,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>123456GUI</name>
     <message>
         <source>Warning</source>
         <translation>সতর্কতা</translation>

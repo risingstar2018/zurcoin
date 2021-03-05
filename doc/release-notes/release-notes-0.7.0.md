@@ -1,21 +1,21 @@
-Bitcoin version 0.7.0 is now available for download at:
-  http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.7.0/
+Zurcoin version 0.7.0 is now available for download at:
+  http://sourceforge.net/projects/bitcoin/files/Zurcoin/bitcoin-0.7.0/
 
-We recommend that everybody running prior versions of bitcoind/Bitcoin-Qt
+We recommend that everybody running prior versions of bitcoind/Zurcoin-Qt
 upgrade to this release, except for users running Mac OSX 10.5.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/bitcoin/bitcoin/issues
+  https://github.com/zurcoin/zurcoin/issues
 
 Project source code is hosted at github; you can get
 source-only tarballs/zipballs directly from there:
-  https://github.com/bitcoin/bitcoin/tarball/v0.7.0  # .tar.gz
-  https://github.com/bitcoin/bitcoin/zipball/v0.7.0  # .zip
+  https://github.com/zurcoin/zurcoin/tarball/v0.7.0  # .tar.gz
+  https://github.com/zurcoin/zurcoin/zipball/v0.7.0  # .zip
 
 Ubuntu Linux users can use the "Personal Package Archive" (PPA)
 maintained by Matt Corallo to automatically keep 
 bitcoin up-to-date.  Just type
-  sudo apt-add-repository ppa:bitcoin/bitcoin
+  sudo apt-add-repository ppa:zurcoin/zurcoin
   sudo apt-get update
 in your terminal, then install the bitcoin-qt package:
   sudo apt-get install bitcoin-qt
@@ -27,7 +27,7 @@ If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
 Code:
-/Applications/Bitcoin-Qt
+/Applications/Zurcoin-Qt
 (on Mac) or
 Code:
 bitcoind/bitcoin-qt
@@ -45,7 +45,7 @@ Incompatible Changes
   and 'getrawmempool' commands.
 * Remove deprecated RPC 'getblocknumber'
 
-Bitcoin Improvement Proposals implemented
+Zurcoin Improvement Proposals implemented
 
 BIP 22 - 'getblocktemplate', 'submitblock' RPCs
 BIP 34 - block version 2, height in coinbase

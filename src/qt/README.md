@@ -32,7 +32,7 @@ Tests.
 
 ### bitcoingui.(h/cpp)
 
-Represents the main window of the Bitcoin UI.
+Represents the main window of the Zurcoin UI.
 
 ### \*model.(h/cpp)
 
@@ -50,7 +50,7 @@ Various dialogs, e.g. to open a URL. Inherit from [QDialog](https://doc.qt.io/qt
 
 ### paymentserver.(h/cpp)
 
-Used to process BIP21 and BIP70 (see https://github.com/bitcoin/bitcoin/pull/11622) payment URI / requests. Also handles URI based application switching (e.g. when following a bitcoin:... link from a browser).
+Used to process BIP21 and BIP70 (see https://github.com/zurcoin/zurcoin/pull/11622) payment URI / requests. Also handles URI based application switching (e.g. when following a bitcoin:... link from a browser).
 
 ### walletview.(h/cpp)
 

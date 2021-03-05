@@ -5,17 +5,17 @@
 # See "man systemd.service" for details.
 
 # Note that almost all daemon options could be specified in
-# /etc/bitcoin/bitcoin.conf, except for those explicitly specified as arguments
+# /etc/bitcoin/zurcoin.conf, except for those explicitly specified as arguments
 # in ExecStart=
 
 [Unit]
-Description=Bitcoin daemon
+Description=Zurcoin daemon
 After=network.target
 
 [Service]
 ExecStart=/usr/bin/bitcoind -daemon \
                             -pid=/run/bitcoind/bitcoind.pid \
-                            -conf=/etc/bitcoin/bitcoin.conf \
+                            -conf=/etc/bitcoin/zurcoin.conf \
                             -datadir=/var/lib/bitcoind
 
 # Process management

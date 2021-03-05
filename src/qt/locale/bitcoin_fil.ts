@@ -66,12 +66,12 @@
         <translation>Address na tatanggap</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ito ang iyong mga Bitcoin addresses para sa pagpapadala ng bayad. Laging suriin ang halaga at ang address na tatanggap bago magpadala ng coins.</translation>
+        <source>These are your Zurcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ito ang iyong mga Zurcoin addresses para sa pagpapadala ng bayad. Laging suriin ang halaga at ang address na tatanggap bago magpadala ng coins.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ito ang iyong mga Bitcoin addresses para sa pagtanggap ng bayad. Inirerekomenda na gumamit ng bagong tanggapang address sa bawat transaksyon.</translation>
+        <source>These are your Zurcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Ito ang iyong mga Zurcoin addresses para sa pagtanggap ng bayad. Inirerekomenda na gumamit ng bagong tanggapang address sa bawat transaksyon.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -224,7 +224,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>123456GUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Pirmahan ang mensahe...</translation>
@@ -318,8 +318,8 @@
         <translation>Ang panghalili ay pinagana: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>Ipadala ang coins sa Bitcoin address</translation>
+        <source>Send coins to a Zurcoin address</source>
+        <translation>Ipadala ang coins sa Zurcoin address</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -342,8 +342,8 @@
         <translation>Tiyakin ang katotohanan ng mensahe...</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Zurcoin</source>
+        <translation>Zurcoin</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -366,12 +366,12 @@
         <translation>I-encrypt ang private keys ng iyong walet</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>Pirmahan ang mga mensahe gamit ang iyong mga Bitcoin address upang mapatunayang ikaw ang may-ari nito</translation>
+        <source>Sign messages with your Zurcoin addresses to prove you own them</source>
+        <translation>Pirmahan ang mga mensahe gamit ang iyong mga Zurcoin address upang mapatunayang ikaw ang may-ari nito</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>Tiyakin ang katotohanan ng mga mensahe para siguruhing ang mga ito ay pinirmahan gamit ang tinukoy na mga Bitcoin addresses</translation>
+        <source>Verify messages to ensure they were signed with specified Zurcoin addresses</source>
+        <translation>Tiyakin ang katotohanan ng mga mensahe para siguruhing ang mga ito ay pinirmahan gamit ang tinukoy na mga Zurcoin addresses</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -390,8 +390,8 @@
         <translation>Tabs toolbar</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Humiling ng bayad (lumilikha ng QR codes at bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and zurcoin: URIs)</source>
+        <translation>Humiling ng bayad (lumilikha ng QR codes at zurcoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -402,8 +402,8 @@
         <translation>Ipakita ang talaan ng mga gamit na address at label para sa pagtanggap</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Buksan ang bitcoin: URI o kahilingan ng bayad</translation>
+        <source>Open a zurcoin: URI or payment request</source>
+        <translation>Buksan ang zurcoin: URI o kahilingan ng bayad</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -466,8 +466,8 @@
         <translation>Isara ang walet</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
-        <translation>Ipakita sa %1 ang tulong na mensahe upang makuha ang talaan ng mga posibleng opsyon ng Bitcoin command-line</translation>
+        <source>Show the %1 help message to get a list with possible Zurcoin command-line options</source>
+        <translation>Ipakita sa %1 ang tulong na mensahe upang makuha ang talaan ng mga posibleng opsyon ng Zurcoin command-line</translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -570,8 +570,8 @@
         <translation>Walet ay na-encrypt at kasalukuyang naka-lock.</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
-        <translation>May nangyaring malubhang kamalian. Hindi na kayang magpatuloy ng ligtas ang Bitcoin at ito ay hihinto na.</translation>
+        <source>A fatal error occurred. Zurcoin can no longer continue safely and will quit.</source>
+        <translation>May nangyaring malubhang kamalian. Hindi na kayang magpatuloy ng ligtas ang Zurcoin at ito ay hihinto na.</translation>
     </message>
 </context>
 <context>
@@ -716,8 +716,8 @@
         <translation>Baguhin ang address para sa pagpapadala</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation>Ang address na in-enter "%1" ay hindi isang wastong Bitcoin address.</translation>
+        <source>The entered address "%1" is not a valid Zurcoin address.</source>
+        <translation>Ang address na in-enter "%1" ay hindi isang wastong Zurcoin address.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -805,8 +805,8 @@
         <translation>Gamitin ang pasadyang data directory:</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Zurcoin</source>
+        <translation>Zurcoin</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -817,8 +817,8 @@
         <translation>Humigit-kumulang na %1 GB na data ay maiimbak sa direktoryong ito.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Bitcoin block chain.</source>
-        <translation>%1 ay mag-do-download at magiimbak ng kopya ng Bitcoin blockchain.</translation>
+        <source>%1 will download and store a copy of the Zurcoin block chain.</source>
+        <translation>%1 ay mag-do-download at magiimbak ng kopya ng Zurcoin blockchain.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1014,8 +1014,8 @@
         <translation>Gastusin ang sukli na hindi pa nakumpirma</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Kusang buksan ang Bitcoin client port sa router. Gumagana lamang ito kapag ang iyong router ay sumusuporta ng UPnP at ito ay pinagana.</translation>
+        <source>Automatically open the Zurcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Kusang buksan ang Zurcoin client port sa router. Gumagana lamang ito kapag ang iyong router ay sumusuporta ng UPnP at ito ay pinagana.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1030,8 +1030,8 @@
         <translation>Ipahintulot ang mga papasok na koneksyon</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
-        <translation>Kumunekta sa Bitcoin network sa pamamagitan ng SOCKS5 proxy.</translation>
+        <source>Connect to the Zurcoin network through a SOCKS5 proxy.</source>
+        <translation>Kumunekta sa Zurcoin network sa pamamagitan ng SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1066,8 +1066,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Kumunekta sa Bitcoin network sa pamamagitan ng hiwalay na SOCKS5 proxy para sa mga tagong serbisyo ng Tor.</translation>
+        <source>Connect to the Zurcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Kumunekta sa Zurcoin network sa pamamagitan ng hiwalay na SOCKS5 proxy para sa mga tagong serbisyo ng Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>

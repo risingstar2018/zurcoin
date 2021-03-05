@@ -42,8 +42,8 @@
         <translation>Auswählen</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dies sind Ihre Bitcoin-Adressen für den Empfang von Zahlungen. Es wird empfohlen, für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
+        <source>These are your Zurcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dies sind Ihre Zurcoin-Adressen für den Empfang von Zahlungen. Es wird empfohlen, für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
     </message>
     <message>
         <source>Export Address List</source>
@@ -140,7 +140,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>123456GUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;Übersicht</translation>
@@ -222,8 +222,8 @@
         <translation>Nachricht &amp;bestätigen</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Zurcoin</source>
+        <translation>Zurcoin</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -246,12 +246,12 @@
         <translation>Verschlüssele die Private Keys, die zu deiner Brieftasche gehören</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>Nachrichten mit Ihrer Bitcoin-Adresse signieren, um zu beweisen, dass sie Ihnen gehören</translation>
+        <source>Sign messages with your Zurcoin addresses to prove you own them</source>
+        <translation>Nachrichten mit Ihrer Zurcoin-Adresse signieren, um zu beweisen, dass sie Ihnen gehören</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>Überprüfen Sie Nachrichten, um sicherzustellen, dass sie mit den angegebenen Bitcoin-Adressen signiert wurden</translation>
+        <source>Verify messages to ensure they were signed with specified Zurcoin addresses</source>
+        <translation>Überprüfen Sie Nachrichten, um sicherzustellen, dass sie mit den angegebenen Zurcoin-Adressen signiert wurden</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -316,8 +316,8 @@
         <translation>Überweisung empfangen</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
-        <translation>Ein schwerwiegender Fehler ist aufgetreten. Bitcoin kann nicht mehr sicher fortfahren und beendet sich.</translation>
+        <source>A fatal error occurred. Zurcoin can no longer continue safely and will quit.</source>
+        <translation>Ein schwerwiegender Fehler ist aufgetreten. Zurcoin kann nicht mehr sicher fortfahren und beendet sich.</translation>
     </message>
 </context>
 <context>
@@ -415,8 +415,8 @@
         <translation>Willkommen</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Zurcoin</source>
+        <translation>Zurcoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -460,8 +460,8 @@
         <translation>Betrag</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
-        <translation>Bitcoin Adresse eingeben (z.B. %1)</translation>
+        <source>Enter a Zurcoin address (e.g. %1)</source>
+        <translation>Zurcoin Adresse eingeben (z.B. %1)</translation>
     </message>
     <message>
         <source>N/A</source>

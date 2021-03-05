@@ -1,27 +1,27 @@
-Bitcoin Core version 0.9.0 is now available from:
+Zurcoin Core version 0.9.0 is now available from:
 
-  https://bitcoin.org/bin/0.9.0/
+  https://zurcoin.org/bin/0.9.0/
 
 This is a new major version release, bringing both new features and
 bug fixes.
 
 Please report bugs using the issue tracker at github:
 
-  https://github.com/bitcoin/bitcoin/issues
+  https://github.com/zurcoin/zurcoin/issues
 
 How to Upgrade
 --------------
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), uninstall all
-earlier versions of Bitcoin, then run the installer (on Windows) or just copy
-over /Applications/Bitcoin-Qt (on Mac) or bitcoind/bitcoin-qt (on Linux).
+earlier versions of Zurcoin, then run the installer (on Windows) or just copy
+over /Applications/Zurcoin-Qt (on Mac) or bitcoind/bitcoin-qt (on Linux).
 
 If you are upgrading from version 0.7.2 or earlier, the first time you run
 0.9.0 your blockchain files will be re-indexed, which will take anywhere from 
 30 minutes to several hours, depending on the speed of your machine.
 
-On Windows, do not forget to uninstall all earlier versions of the Bitcoin
+On Windows, do not forget to uninstall all earlier versions of the Zurcoin
 client first, especially if you are switching to the 64-bit version.
 
 Windows 64-bit installer
@@ -59,11 +59,11 @@ Also, the first time you run a 0.8.x release on a 0.9 wallet it will rescan
 the blockchain for missing spent coins, which will take a long time (tens
 of minutes on a typical machine).
 
-Rebranding to Bitcoin Core
+Rebranding to Zurcoin Core
 ---------------------------
 
-To reduce confusion between Bitcoin-the-network and Bitcoin-the-software we
-have renamed the reference client to Bitcoin Core.
+To reduce confusion between Zurcoin-the-network and Zurcoin-the-software we
+have renamed the reference client to Zurcoin Core.
 
 
 OP_RETURN and data in the block chain
@@ -85,13 +85,13 @@ Autotools build system
 For 0.9.0 we switched to an autotools-based build system instead of individual
 (q)makefiles.
 
-Using the standard "./autogen.sh; ./configure; make" to build Bitcoin-Qt and
+Using the standard "./autogen.sh; ./configure; make" to build Zurcoin-Qt and
 bitcoind makes it easier for experienced open source developers to contribute 
 to the project.
 
 Be sure to check doc/build-*.md for your platform before building from source.
 
-Bitcoin-cli
+Zurcoin-cli
 -------------
 
 Another change in the 0.9 release is moving away from the bitcoind executable
@@ -295,7 +295,7 @@ GUI:
 - Add Coin Control Features
 - Improve receive coins workflow: make the 'Receive' tab into a form to request
   payments, and move historical address list functionality to File menu.
-- Rebrand to `Bitcoin Core`
+- Rebrand to `Zurcoin Core`
 - Move initialization/shutdown to a thread. This prevents "Not responding"
   messages during startup. Also show a window during shutdown.
 - Don't regenerate autostart link on every client startup

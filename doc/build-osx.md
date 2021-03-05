@@ -38,17 +38,17 @@ from the root of the repository.
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see [*Disable-wallet mode*](/doc/build-osx.md#disable-wallet-mode)).
 
-Build Bitcoin Core
+Build Zurcoin Core
 ------------------------
 
-1. Clone the Bitcoin Core source code:
+1. Clone the Zurcoin Core source code:
 
         git clone https://github.com/bitcoin/bitcoin
         cd bitcoin
 
-2.  Build Bitcoin Core:
+2.  Build Zurcoin Core:
 
-    Configure and build the headless Bitcoin Core binaries as well as the GUI (if Qt is found).
+    Configure and build the headless Zurcoin Core binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -66,7 +66,7 @@ Build Bitcoin Core
 
 Disable-wallet mode
 --------------------
-When the intention is to run only a P2P node without a wallet, Bitcoin Core may be compiled in
+When the intention is to run only a P2P node without a wallet, Zurcoin Core may be compiled in
 disable-wallet mode with:
 
     ./configure --disable-wallet
@@ -78,7 +78,7 @@ Mining is also possible in disable-wallet mode using the `getblocktemplate` RPC 
 Running
 -------
 
-Bitcoin Core is now available at `./src/bitcoind`
+Zurcoin Core is now available at `./src/bitcoind`
 
 Before running, you may create an empty configuration file:
 
@@ -106,7 +106,7 @@ Notes
 
 * Tested on OS X 10.10 Yosemite through macOS 10.13 High Sierra on 64-bit Intel processors only.
 
-* Building with downloaded Qt binaries is not officially supported. See the notes in [#7714](https://github.com/bitcoin/bitcoin/issues/7714)
+* Building with downloaded Qt binaries is not officially supported. See the notes in [#7714](https://github.com/zurcoin/zurcoin/issues/7714)
 
 Deterministic macOS DMG Notes
 -----------------------------

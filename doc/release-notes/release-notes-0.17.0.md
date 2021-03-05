@@ -1,24 +1,24 @@
-Bitcoin Core version 0.17.0 is now available from:
+Zurcoin Core version 0.17.0 is now available from:
 
-  <https://bitcoincore.org/bin/bitcoin-core-0.17.0/>
+  <https://zurcoin.org/bin/bitcoin-core-0.17.0/>
 
 This is a new major version release, including new features, various bugfixes
 and performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/bitcoin/bitcoin/issues>
+  <https://github.com/zurcoin/zurcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://bitcoincore.org/en/list/announcements/join/>
+  <https://zurcoin.org/en/list/announcements/join/>
 
 How to Upgrade
 ==============
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
+installer (on Windows) or just copy over `/Applications/Zurcoin-Qt` (on Mac)
 or `bitcoind`/`bitcoin-qt` (on Linux).
 
 If your node has a txindex, the txindex db will be migrated the first time you run 0.17.0 or newer, which may take up to a few hours. Your node will not be functional until this migration completes.
@@ -46,10 +46,10 @@ processing the entire blockchain.
 Compatibility
 ==============
 
-Bitcoin Core is extensively tested on multiple operating systems using
+Zurcoin Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.10+, and Windows 7 and newer (Windows XP is not supported).
 
-Bitcoin Core should also work on most other Unix-like systems but is not
+Zurcoin Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 From 0.17.0 onwards macOS <10.10 is no longer supported. 0.17.0 is built using Qt 5.9.x, which doesn't
@@ -69,7 +69,7 @@ Changed configuration options
 -----------------------------
 
 - `-includeconf=<file>` can be used to include additional configuration files.
-  Only works inside the `bitcoin.conf` file, not inside included files or from
+  Only works inside the `zurcoin.conf` file, not inside included files or from
   command-line. Multiple files may be included. Can be disabled from command-
   line via `-noincludeconf`. Note that multi-argument commands like
   `-includeconf` will override preceding `-noincludeconf`, i.e.
@@ -78,7 +78,7 @@ Changed configuration options
   includeconf=relative.conf
   ```
 
-  as bitcoin.conf will still include `relative.conf`.
+  as zurcoin.conf will still include `relative.conf`.
 
 GUI changes
 -----------
@@ -109,7 +109,7 @@ same as before.
 Dynamic loading and creation of wallets
 ---------------------------------------
 
-Previously, wallets could only be loaded or created at startup, by specifying `-wallet` parameters on the command line or in the bitcoin.conf file. It is now possible to load, create and unload wallets dynamically at runtime:
+Previously, wallets could only be loaded or created at startup, by specifying `-wallet` parameters on the command line or in the zurcoin.conf file. It is now possible to load, create and unload wallets dynamically at runtime:
 
 - Existing wallets can be loaded by calling the `loadwallet` RPC. The wallet can be specified as file/directory basename (which must be located in the `walletdir` directory), or as an absolute path to a file/directory.
 - New wallets can be created (and loaded) by calling the `createwallet` RPC. The provided name must not match a wallet file in the `walletdir` directory or the name of a wallet that is currently loaded.
@@ -184,10 +184,10 @@ Here are the changes to RPC methods:
 | `listtransactions`     | The `account` named parameter has been renamed to `dummy`. If provided, the `dummy` parameter must be set to the string `*`, unless running with the `-deprecatedrpc=accounts` argument (in which case functionality is unchanged). |
 | `getbalance`           | `account`, `minconf` and `include_watchonly` parameters are deprecated, and can only be used if running with '-deprecatedrpc=accounts' |
 
-BIP 174 Partially Signed Bitcoin Transactions support
+BIP 174 Partially Signed Zurcoin Transactions support
 -----------------------------------------------------
 
-[BIP 174 PSBT](https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki) is an interchange format for Bitcoin transactions that are not fully signed
+[BIP 174 PSBT](https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki) is an interchange format for Zurcoin transactions that are not fully signed
 yet, together with relevant metadata to help entities work towards signing it.
 It is intended to simplify workflows where multiple parties need to cooperate to
 produce a transaction. Examples include hardware wallets, multisig setups, and
@@ -195,7 +195,7 @@ produce a transaction. Examples include hardware wallets, multisig setups, and
 
 ### Overall workflow
 
-Overall, the construction of a fully signed Bitcoin transaction goes through the
+Overall, the construction of a fully signed Zurcoin transaction goes through the
 following steps:
 
 - A **Creator** proposes a particular transaction to be created. He constructs
@@ -210,7 +210,7 @@ following steps:
   partial signature for the inputs for which they have relevant key(s).
 - A **Finalizer** is run for each input to convert the partial signatures and
   possibly script information into a final `scriptSig` and/or `scriptWitness`.
-- An **Extractor** produces a valid Bitcoin transaction (in network format)
+- An **Extractor** produces a valid Zurcoin transaction (in network format)
   from a PSBT for which all inputs are finalized.
 
 Generally, each of the above (excluding Creator and Extractor) will simply
@@ -256,7 +256,7 @@ hardware implementations will typically implement multiple roles simultaneously.
 Upgrading non-HD wallets to HD wallets
 --------------------------------------
 
-Since Bitcoin Core 0.13.0, creating new BIP 32 Hierarchical Deterministic wallets has been supported by Bitcoin Core but old non-HD wallets could not be upgraded to HD. Now non-HD wallets can be upgraded to HD using the `-upgradewallet` command line option. This upgrade will result in the all keys in the keypool being marked as used and a new keypool generated. **A new backup must be made when this upgrade is performed.**
+Since Zurcoin Core 0.13.0, creating new BIP 32 Hierarchical Deterministic wallets has been supported by Zurcoin Core but old non-HD wallets could not be upgraded to HD. Now non-HD wallets can be upgraded to HD using the `-upgradewallet` command line option. This upgrade will result in the all keys in the keypool being marked as used and a new keypool generated. **A new backup must be made when this upgrade is performed.**
 
 Additionally, `-upgradewallet` can be used to upgraded from a non-split HD chain (all keys generated with `m/0'/0'/i'`) to a split HD chain (receiving keys generated with `'m/0'/0'/i'` and change keys generated with `m'/0'/1'/i'`). When this upgrade occurs, all keys already in the keypool will remain in the keypool to be used until all keys from before the upgrade are exhausted. This is to avoid issues with backups and downgrades when some keys may come from the change key keypool. Users can begin using the new split HD chain keypools by using the `newkeypool` RPC to mark all keys in the keypool as used and begin using a new keypool generated from the split HD chain.
 
@@ -657,7 +657,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #12425 `26dc2da` Add some script tests (richardkiss)
 - #12455 `23481fa` Fix bip68 sequence test to reflect updated rpc error message (Empact)
 - #12477 `acd1e61` Plug memory leaks and stack-use-after-scope (MarcoFalke)
-- #12443 `07090c5` Move common args to bitcoin.conf (MarcoFalke)
+- #12443 `07090c5` Move common args to zurcoin.conf (MarcoFalke)
 - #12570 `39dcac2` Add test cases for HexStr (`std::reverse_iterator` and corner cases) (kostaz)
 - #12582 `6012f1c` Fix ListCoins test failure due to unset `g_wallet_allow_fallback_fee` (ryanofsky)
 - #12516 `7f99964` Avoid unintentional unsigned integer wraparounds in tests (practicalswift)
@@ -935,7 +935,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #13625 `7146672` Add release notes for -printtoconsole and -debuglogfile changes (satwo)
 - #13718 `f7f574d` Specify preferred Python string formatting technique (masonicboom)
 - #12764 `10b9a81` Remove field in getblocktemplate help that has never been used (conscott)
-- #13742 `d2186b3` Adjust bitcoincore.org links (MarcoFalke)
+- #13742 `d2186b3` Adjust zurcoin.org links (MarcoFalke)
 - #13706 `94dd89e` Minor improvements to release-process.md (MitchellCash)
 - #13775 `ef4fac0` Remove newlines from error message (practicalswift)
 - #13803 `feb7dd9` add note to contributor docs about warranted PR's (kallewoof)

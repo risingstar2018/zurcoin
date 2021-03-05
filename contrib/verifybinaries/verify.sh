@@ -24,8 +24,8 @@ TMPFILE="hashes.tmp"
 
 SIGNATUREFILENAME="SHA256SUMS.asc"
 RCSUBDIR="test"
-HOST1="https://bitcoincore.org"
-HOST2="https://bitcoin.org"
+HOST1="https://zurcoin.org"
+HOST2="https://zurcoin.org"
 BASEDIR="/bin/"
 VERSIONPREFIX="bitcoin-core-"
 RCVERSIONSTRING="rc"
@@ -96,7 +96,7 @@ fi
 
 WGETOUT=$(wget -N -O "$SIGNATUREFILENAME.2" "$HOST2$BASEDIR$SIGNATUREFILENAME" 2>&1)
 if [ $? -ne 0 ]; then
-   echo "bitcoin.org failed to provide signature file, but bitcoincore.org did?"
+   echo "zurcoin.org failed to provide signature file, but zurcoin.org did?"
    echo "wget output:"
    echo "$WGETOUT"|sed 's/^/\t/g'
    clean_up $SIGNATUREFILENAME
@@ -105,7 +105,7 @@ fi
 
 SIGFILEDIFFS="$(diff $SIGNATUREFILENAME $SIGNATUREFILENAME.2)"
 if [ "$SIGFILEDIFFS" != "" ]; then
-   echo "bitcoin.org and bitcoincore.org signature files were not equal?"
+   echo "zurcoin.org and zurcoin.org signature files were not equal?"
    clean_up $SIGNATUREFILENAME $SIGNATUREFILENAME.2
    exit 4
 fi
@@ -124,7 +124,7 @@ if [ $RET -ne 0 ]; then
       echo "Bad signature."
    elif [ $RET -eq 2 ]; then
       #or if a gpg error has occurred
-      echo "gpg error. Do you have the Bitcoin Core binary release signing key installed?"
+      echo "gpg error. Do you have the Zurcoin Core binary release signing key installed?"
    fi
 
    echo "gpg output:"

@@ -1,10 +1,10 @@
-Bitcoin version 0.6.3 is now available for download at:
-  http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.6.3/
+Zurcoin version 0.6.3 is now available for download at:
+  http://sourceforge.net/projects/bitcoin/files/Zurcoin/bitcoin-0.6.3/
 
 This is a bug-fix release, with no new features.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/bitcoin/bitcoin/issues
+  https://github.com/zurcoin/zurcoin/issues
 
 CHANGE SUMMARY
 
@@ -20,10 +20,10 @@ Fixed an obscure bug that could cause the bitcoin process to get
 stuck on an invalid block-chain, if the invalid chain was
 hundreds of blocks long.
 
-Bitcoin-Qt no longer automatically selects the first address
+Zurcoin-Qt no longer automatically selects the first address
 in the address book (Issue #1384).
 
-Fixed minimize-to-dock behavior of Bitcoin-Qt on the Mac.
+Fixed minimize-to-dock behavior of Zurcoin-Qt on the Mac.
 
 Added a block checkpoint at block 185,333 to speed up initial
 blockchain download.

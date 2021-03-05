@@ -1,5 +1,5 @@
-Bitcoin version 0.6.0 is now available for download at:
-http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.6.0/test/
+Zurcoin version 0.6.0 is now available for download at:
+http://sourceforge.net/projects/bitcoin/files/Zurcoin/bitcoin-0.6.0/test/
 
 This release includes more than 20 language localizations.
 More translations are welcome; join the
@@ -7,18 +7,18 @@ project at Transifex to help:
 https://www.transifex.net/projects/p/bitcoin/
 
 Please report bugs using the issue tracker at github:
-https://github.com/bitcoin/bitcoin/issues
+https://github.com/zurcoin/zurcoin/issues
 
 Project source code is hosted at github; we are no longer
 distributing .tar.gz files here, you can get them
 directly from github:
-https://github.com/bitcoin/bitcoin/tarball/v0.6.0  # .tar.gz
-https://github.com/bitcoin/bitcoin/zipball/v0.6.0  # .zip
+https://github.com/zurcoin/zurcoin/tarball/v0.6.0  # .tar.gz
+https://github.com/zurcoin/zurcoin/zipball/v0.6.0  # .zip
 
 For Ubuntu users, there is a ppa maintained by Matt Corallo which
 you can add to your system so that it will automatically keep
 bitcoin up-to-date.  Just type
-sudo apt-add-repository ppa:bitcoin/bitcoin
+sudo apt-add-repository ppa:zurcoin/zurcoin
 in your terminal, then install the bitcoin-qt package.
 
 
@@ -38,7 +38,7 @@ hours).
 
 Backup Wallet menu option.
 
-Bitcoin-Qt can display and save QR codes for sending
+Zurcoin-Qt can display and save QR codes for sending
 and receiving addresses.
 
 New context menu on addresses to copy/edit/delete them.
@@ -54,14 +54,14 @@ transactions and less traffic on the bitcoin
 network. The shorter keys are already supported
 by the network but wallet.dat files containing
 short keys are not compatible with earlier
-versions of Bitcoin-Qt/bitcoind.
+versions of Zurcoin-Qt/bitcoind.
 
 New command-line argument -blocknotify=<command>
 that will spawn a shell process to run <command> 
 when a new block is accepted.
 
 New command-line argument -splash=0 to disable
-Bitcoin-Qt's initial splash screen
+Zurcoin-Qt's initial splash screen
 
 validateaddress JSON-RPC api command output includes
 two new fields for addresses in the wallet:
@@ -105,10 +105,10 @@ attacks were fixed.
 NOT YET IMPLEMENTED FEATURES
 
 Support for clicking on bitcoin: URIs and
-opening/launching Bitcoin-Qt is available only on Linux,
+opening/launching Zurcoin-Qt is available only on Linux,
 and only if you configure your desktop to launch
-Bitcoin-Qt. All platforms support dragging and dropping
-bitcoin: URIs onto the Bitcoin-Qt window to start
+Zurcoin-Qt. All platforms support dragging and dropping
+bitcoin: URIs onto the Zurcoin-Qt window to start
 payment.
 
 
@@ -125,7 +125,7 @@ with this release multisignature transactions are
 considered standard and will start to be relayed
 and accepted into blocks.
 
-It is expected that future releases of Bitcoin-Qt
+It is expected that future releases of Zurcoin-Qt
 will support the creation of multisignature transactions,
 once enough of the network has upgraded so relaying
 and validating them is robust.
