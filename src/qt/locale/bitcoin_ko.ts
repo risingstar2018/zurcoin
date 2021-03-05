@@ -216,7 +216,7 @@
     </message>
 </context>
 <context>
-    <name>123456GUI</name>
+    <name>BitcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;메시지에 서명하기...</translation>

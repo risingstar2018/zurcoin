@@ -149,7 +149,7 @@
     </message>
 </context>
 <context>
-    <name>123456GUI</name>
+    <name>BitcoinGUI</name>
     <message>
         <source>Send coins to a Zurcoin address</source>
         <translation>ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន Zurcoin មួយ</translation>

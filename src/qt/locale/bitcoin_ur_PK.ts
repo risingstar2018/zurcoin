@@ -116,7 +116,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>123456GUI</name>
+    <name>BitcoinGUI</name>
     <message>
         <source>Error</source>
         <translation>نقص</translation>

@@ -308,7 +308,7 @@
     </message>
 </context>
 <context>
-    <name>123456GUI</name>
+    <name>BitcoinGUI</name>
     <message>
         <location filename="../bitcoingui.cpp" line="+318"/>
         <source>Sign &amp;message...</source>
