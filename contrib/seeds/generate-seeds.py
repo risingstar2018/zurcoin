@@ -4,31 +4,24 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 '''
 Script to generate list of seed nodes for chainparams.cpp.
-
 This script expects two text files in the directory that is passed as an
 argument:
-
     nodes_main.txt
     nodes_test.txt
-
 These files must consist of lines in the format
-
     <ip>
     <ip>:<port>
     [<ipv6>]
     [<ipv6>]:<port>
     <onion>.onion
     0xDDBBCCAA (IPv4 little-endian old pnSeeds format)
-
 The output will be two data structures with the peers in binary format:
-
    static SeedSpec6 pnSeed6_main[]={
    ...
    }
    static SeedSpec6 pnSeed6_test[]={
    ...
    }
-
 These should be pasted into `src/chainparamsseeds.h`.
 '''
 
@@ -74,7 +67,7 @@ def name_to_ipv6(addr):
         raise ValueError('Could not parse address %s' % addr)
 
 def parse_spec(s, defaultport):
-    match = re.match('\[([0-9a-fA-F:]+)\](?::([0-9]+))?$', s)
+    match = re.match(r'\[([0-9a-fA-F:]+)\](?::([0-9]+))?$', s)
     if match: # ipv6
         host = match.group(1)
         port = match.group(2)
@@ -136,4 +129,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
