@@ -1080,7 +1080,7 @@
         <translation>Σφάλμα αίτησης πληρωμής</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start zur: click-to-pay handler</source>
         <translation>Δεν είναι δυνατή η εκκίνηση του bitcoin: χειριστής click-to-pay</translation>
     </message>
     <message>

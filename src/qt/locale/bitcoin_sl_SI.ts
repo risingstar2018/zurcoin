@@ -1287,7 +1287,7 @@
         <translation>Napaka pri zahtevi plačila</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start zur: click-to-pay handler</source>
         <translation>Ni mogoče zagnati rokovalca plačilnih povezav tipa bitcoin:.</translation>
     </message>
     <message>

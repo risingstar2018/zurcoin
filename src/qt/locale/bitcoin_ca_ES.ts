@@ -1170,7 +1170,7 @@
         <translation>Error de la sol·licitud de pagament</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start zur: click-to-pay handler</source>
         <translation>No es pot iniciar bitcoin: controlador click-to-pay</translation>
     </message>
     <message>

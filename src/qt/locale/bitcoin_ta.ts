@@ -772,7 +772,7 @@
         <translation>படிவம்</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the zurcoin network, as detailed below.</source>
         <translation>சமீபத்திய பரிவர்த்தனைகள் இன்னும் காணப்படாமல் இருக்கலாம், எனவே உங்கள் பணப்பையின் சமநிலை தவறாக இருக்கலாம். கீழே விவரிக்கப்பட்டுள்ளபடி, உங்கள் பணப்பை பிட்ஃபோனை நெட்வொர்க்குடன் ஒத்திசைக்க முடிந்ததும் இந்த தகவல் சரியாக இருக்கும்.</translation>
     </message>
     <message>
@@ -1172,7 +1172,7 @@
         <translation>கட்டணம் கோரிக்கை பிழை</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start zur: click-to-pay handler</source>
         <translation>Zurcoin தொடங்க முடியாது: கிளிக் க்கு ஊதியம் கையாளுதல்</translation>
     </message>
     <message>
@@ -1923,7 +1923,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>டஸ்ட்</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for bitcoin transactions than the network can process.</source>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for zurcoin transactions than the network can process.</source>
         <translation>தொகுதிகள் உள்ள இடத்தை விட குறைவான பரிவர்த்தனை அளவு இருக்கும் போது, ​​சுரங்க தொழிலாளர்கள் மற்றும் ரிலேடிங் முனைகள் குறைந்தபட்ச கட்டணத்தைச் செயல்படுத்தலாம். இந்த குறைந்தபட்ச கட்டணத்தை மட்டும் செலுத்துவது நன்றாக உள்ளது, ஆனால் நெட்வொர்க்கில் செயல்படுவதை விட bitcoin பரிவர்த்தனைகளுக்கு இன்னும் கோரிக்கை தேவைப்பட்டால் இது ஒருபோதும் உறுதிப்படுத்தாத பரிவர்த்தனைக்கு காரணமாக இருக்கலாம்.</translation>
     </message>
     <message>

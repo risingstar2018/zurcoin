@@ -876,7 +876,7 @@
         <translation>Formulari</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the zurcoin network, as detailed below.</source>
         <translation>És possible que les transaccions recents encara no siguin visibles i, per tant, el saldo del vostre moneder podria ser incorrecte. Aquesta informació serà correcta una vegada que el vostre moneder hagi finalitzat la sincronització amb la xarxa bitcoin, tal com es detalla més avall.</translation>
     </message>
     <message>
@@ -1288,7 +1288,7 @@
         <translation>Error de la sol·licitud de pagament</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start zur: click-to-pay handler</source>
         <translation>No es pot iniciar bitcoin: controlador click-to-pay</translation>
     </message>
     <message>

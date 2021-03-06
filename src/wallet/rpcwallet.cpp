@@ -312,12 +312,14 @@ static CTransactionRef SendMoney(interfaces::Chain::Lock& locked_chain, CWallet 
 {
     CAmount curBalance = pwallet->GetBalance();
 
+    std::string strError1;
+    strError1 = strprintf("Insufficient funds, nValue = %s, curBalance = %s", FormatMoney(nValue), FormatMoney(curBalance));
     // Check amount
     if (nValue <= 0)
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid amount");
 
     if (nValue > curBalance)
-        throw JSONRPCError(RPC_WALLET_INSUFFICIENT_FUNDS, "Insufficient funds");
+        throw JSONRPCError(RPC_WALLET_INSUFFICIENT_FUNDS, strError1);
 
     if (pwallet->GetBroadcastTransactions() && !g_connman) {
         throw JSONRPCError(RPC_CLIENT_P2P_DISABLED, "Error: Peer-to-peer functionality missing or disabled");

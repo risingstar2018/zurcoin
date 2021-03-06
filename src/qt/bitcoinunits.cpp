@@ -51,10 +51,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Zurcoins");
-    case mBTC: return QString("Milli-Zurcoins (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Deca-Micro-Zurcoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-    case SAT: return QString("Satoshi (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case BTC: return QString("Zurs");
+    case mBTC: return QString("Milli-Zurs (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Deca-Micro-Zurs (1 / 1" THIN_SP_UTF8 "00" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
@@ -66,7 +65,6 @@ qint64 BitcoinUnits::factor(int unit)
     case BTC: return 100000;
     case mBTC: return 100;
     case uBTC: return 1;
-    case SAT: return 1;
     default: return 100000;
     }
 }
@@ -78,7 +76,6 @@ int BitcoinUnits::decimals(int unit)
     case BTC: return 5;
     case mBTC: return 2;
     case uBTC: return 0;
-    case SAT: return 0;
     default: return 0;
     }
 }

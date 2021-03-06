@@ -884,7 +884,7 @@
         <translation>Forma</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the zurcoin network, as detailed below.</source>
         <translation>Nedávne transakcie ešte nemusia byť viditeľné takže zostatok vo vašej peňaženke môže byť nesprávny. Táto informácia sa opraví keď sa vaša peňaženka zosynchronizuje s Zurcoin sieťou ako je popísané nižšie.</translation>
     </message>
     <message>
@@ -1292,7 +1292,7 @@
         <translation>Chyba pri žiadosti o platbu</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start zur: click-to-pay handler</source>
         <translation>Nemôžem spustiť Zurcoin: click-to-pay handler</translation>
     </message>
     <message>
