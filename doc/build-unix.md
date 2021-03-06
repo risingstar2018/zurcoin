@@ -24,7 +24,7 @@ make
 make install # optional
 ```
 
-This will build bitcoin-qt as well, if the dependencies are met.
+This will build zurcoin-qt as well, if the dependencies are met.
 
 Dependencies
 ---------------------
@@ -98,7 +98,7 @@ ZMQ dependencies (provides ZMQ API):
 
 GUI dependencies:
 
-If you want to build bitcoin-qt, make sure that the required packages for Qt development
+If you want to build zurcoin-qt, make sure that the required packages for Qt development
 are installed. Qt 5 is necessary to build the GUI.
 To build without GUI pass `--without-gui`.
 
@@ -110,7 +110,7 @@ libqrencode (optional) can be installed with:
 
     sudo apt-get install libqrencode-dev
 
-Once these are installed, they will be found by configure and a bitcoin-qt executable will be
+Once these are installed, they will be found by configure and a zurcoin-qt executable will be
 built by default.
 
 
@@ -121,6 +121,16 @@ built by default.
 Build requirements:
 
     sudo dnf install gcc-c++ libtool make autoconf automake openssl-devel libevent-devel boost-devel libdb4-devel libdb4-cxx-devel python3
+
+BerkeleyDB is required for the wallet.
+
+ **For Ubuntu only:** db4.8 packages are available [here](https://launchpad.net/~zurcoin/+archive/zurcoin).
+ You can add the repository using the following command:
+
+    sudo apt-get install software-properties-common
+    sudo add-apt-repository ppa:pivx/pivx
+    sudo apt-get update
+    sudo apt-get install libdb4.8-dev libdb4.8++-dev
 
 Optional:
 
@@ -136,7 +146,7 @@ libqrencode (optional) can be installed with:
 
 Notes
 -----
-The release is built with GCC and then "strip bitcoind" to strip the debug
+The release is built with GCC and then "strip zurcoind" to strip the debug
 symbols, which reduces the executable size by about 90%.
 
 
@@ -199,7 +209,7 @@ Hardening enables the following features:
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
 
-    	scanelf -e ./bitcoin
+    	scanelf -e ./zurcoin
 
     The output should contain:
 
@@ -213,7 +223,7 @@ Hardening enables the following features:
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
-    `scanelf -e ./bitcoin`
+    `scanelf -e ./zurcoin`
 
     The output should contain:
 	STK/REL/PTL
@@ -244,8 +254,8 @@ Setup and Build Example: Arch Linux
 This example lists the steps necessary to setup and build a command line only, non-wallet distribution of the latest changes on Arch Linux:
 
     pacman -S git base-devel boost libevent python
-    git clone https://github.com/bitcoin/bitcoin.git
-    cd bitcoin/
+    git clone https://github.com/zurcoin/zurcoin.git
+    cd zurcoin/
     ./autogen.sh
     ./configure --disable-wallet --without-gui --without-miniupnpc
     make check
@@ -253,7 +263,7 @@ This example lists the steps necessary to setup and build a command line only, n
 Note:
 Enabling wallet support requires either compiling against a Berkeley DB newer than 4.8 (package `db`) using `--with-incompatible-bdb`,
 or building and depending on a local version of Berkeley DB 4.8. The readily available Arch Linux packages are currently built using
-`--with-incompatible-bdb` according to the [PKGBUILD](https://projects.archlinux.org/svntogit/community.git/tree/bitcoin/trunk/PKGBUILD).
+`--with-incompatible-bdb` according to the [PKGBUILD](https://projects.archlinux.org/svntogit/community.git/tree/zurcoin/trunk/PKGBUILD).
 As mentioned above, when maintaining portability of the wallet between the standard Zurcoin Core distributions and independently built
 node software is desired, Berkeley DB 4.8 must be used.
 
