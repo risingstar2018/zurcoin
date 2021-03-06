@@ -43,8 +43,8 @@ Build Zurcoin Core
 
 1. Clone the Zurcoin Core source code:
 
-        git clone https://github.com/bitcoin/bitcoin
-        cd bitcoin
+        git clone https://github.com/zurcoin/zurcoin
+        cd zurcoin
 
 2.  Build Zurcoin Core:
 
@@ -78,28 +78,28 @@ Mining is also possible in disable-wallet mode using the `getblocktemplate` RPC 
 Running
 -------
 
-Zurcoin Core is now available at `./src/bitcoind`
+Zurcoin Core is now available at `./src/zurcoind`
 
 Before running, you may create an empty configuration file:
 
-    mkdir -p "/Users/${USER}/Library/Application Support/Bitcoin"
+    mkdir -p "/Users/${USER}/Library/Application Support/Zurcoin"
 
-    touch "/Users/${USER}/Library/Application Support/Bitcoin/bitcoin.conf"
+    touch "/Users/${USER}/Library/Application Support/Zurcoin/zurcoin.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/Bitcoin/bitcoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Zurcoin/zurcoin.conf"
 
-The first time you run bitcoind, it will start downloading the blockchain. This process could take many hours, or even days on slower than average systems.
+The first time you run zurcoind, it will start downloading the blockchain. This process could take many hours, or even days on slower than average systems.
 
 You can monitor the download process by looking at the debug.log file:
 
-    tail -f $HOME/Library/Application\ Support/Bitcoin/debug.log
+    tail -f $HOME/Library/Application\ Support/Zurcoin/debug.log
 
 Other commands:
 -------
 
-    ./src/bitcoind -daemon # Starts the bitcoin daemon.
-    ./src/bitcoin-cli --help # Outputs a list of command-line options.
-    ./src/bitcoin-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/zurcoind -daemon # Starts the zurcoin daemon.
+    ./src/zurcoin-cli --help # Outputs a list of command-line options.
+    ./src/zurcoin-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Notes
 -----
@@ -203,7 +203,7 @@ build process to remain somewhat deterministic. Here's how it works:
   that have been previously (deterministically) built in order to create a
   final dmg.
 - The Apple keyholder uses this unsigned app to create a detached signature,
-  using the script that is also included there. Detached signatures are available from this [repository](https://github.com/bitcoin-core/bitcoin-detached-sigs).
+  using the script that is also included there. Detached signatures are available from this [repository](https://github.com/zurcoin-core/zurcoin-detached-sigs).
 - Builders feed the unsigned app + detached signature back into Gitian. It
   uses the pre-built tools to recombine the pieces into a deterministic dmg.
 
