@@ -123,6 +123,10 @@ public:
         // release ASAP to avoid it where possible.
         // vSeeds.emplace_back("dnsseed.emzy.de"); // Stephan Oeste
         vSeeds.emplace_back("explorer.scrypt.ovh");
+        vSeeds.emplace_back("37.59.8.99");
+        vSeeds.emplace_back("5.196.91.94");
+        vSeeds.emplace_back("50.116.55.60");                        
+
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,69);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,9);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,197);
