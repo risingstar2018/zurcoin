@@ -250,7 +250,7 @@ private:
     void startThread();
 };
 
-#include "zurcoin.moc"
+#include "bitcoin.moc"
 
 BitcoinCore::BitcoinCore():
     QObject()
