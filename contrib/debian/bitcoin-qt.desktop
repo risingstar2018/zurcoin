@@ -1,13 +1,13 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Bitcoin Core
-Comment=Connect to the Bitcoin P2P Network
-Comment[de]=Verbinde mit dem Bitcoin peer-to-peer Netzwerk
-Comment[fr]=Bitcoin, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Bitcoin, eşten eşe kriptografik sanal para birimi
-Exec=bitcoin-qt %u
+Name=Zurcoin Core
+Comment=Connect to the Zurcoin P2P Network
+Comment[de]=Verbinde mit dem Zurcoin peer-to-peer Netzwerk
+Comment[fr]=Zurcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Zurcoin, eşten eşe kriptografik sanal para birimi
+Exec=zurcoin-qt %u
 Terminal=false
 Type=Application
 Icon=bitcoin128
-MimeType=x-scheme-handler/bitcoin;
+MimeType=x-scheme-handler/zurcoin;
 Categories=Office;Finance;

@@ -260,9 +260,9 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>zurcoin-core</name>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Zurcoin Core</source>
         <translation>Биткойн ядро</translation>
     </message>
     </context>

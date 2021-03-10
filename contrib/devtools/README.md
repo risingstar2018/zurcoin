@@ -48,10 +48,10 @@ the commit it claims to have been updated to.
 
 To use, make sure that you have fetched the upstream repository branch in which the subtree is
 maintained:
-* for `src/secp256k1`: https://github.com/bitcoin-core/secp256k1.git (branch master)
-* for `src/leveldb`: https://github.com/bitcoin-core/leveldb.git (branch bitcoin-fork)
-* for `src/univalue`: https://github.com/bitcoin-core/univalue.git (branch master)
-* for `src/crypto/ctaes`: https://github.com/bitcoin-core/ctaes.git (branch master)
+* for `src/secp256k1`: https://github.com/zurcoin-core/secp256k1.git (branch master)
+* for `src/leveldb`: https://github.com/zurcoin-core/leveldb.git (branch zurcoin-fork)
+* for `src/univalue`: https://github.com/zurcoin-core/univalue.git (branch master)
+* for `src/crypto/ctaes`: https://github.com/zurcoin-core/ctaes.git (branch master)
 
 Usage: `git-subtree-check.sh DIR (COMMIT)`
 
@@ -67,7 +67,7 @@ For example:
   ./github-merge.py 3077
 
 (in any git repository) will help you merge pull request #3077 for the
-bitcoin/bitcoin repository.
+zurcoin/zurcoin repository.
 
 What it does:
 * Fetch master and the pull request.
@@ -85,16 +85,16 @@ couldn't mess with the sources.
 
 Setup
 ---------
-Configuring the github-merge tool for the bitcoin repository is done in the following way:
+Configuring the github-merge tool for the zurcoin repository is done in the following way:
 
-    git config githubmerge.repository bitcoin/bitcoin
+    git config githubmerge.repository zurcoin/zurcoin
     git config githubmerge.testcmd "make -j4 check" (adapt to whatever you want to use for testing)
     git config --global user.signingkey mykeyid (if you want to GPG sign)
 
 optimize-pngs.py
 ================
 
-A script to optimize png files in the bitcoin
+A script to optimize png files in the zurcoin
 repository (requires pngcrush).
 
 security-check.py and test-security-check.py

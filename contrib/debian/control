@@ -1,4 +1,4 @@
-Source: bitcoin
+Source: zurcoin
 Section: utils
 Priority: optional
 Maintainer: Jonas Smedegaard <dr@jones.dk>
@@ -24,44 +24,44 @@ Build-Depends: debhelper,
  python
 Standards-Version: 3.9.2
 Homepage: https://bitcoincore.org/
-Vcs-Git: git://github.com/bitcoin/bitcoin.git
-Vcs-Browser: https://github.com/bitcoin/bitcoin
+Vcs-Git: git://github.com/zurcoin/zurcoin.git
+Vcs-Browser: https://github.com/zurcoin/zurcoin
 
-Package: bitcoind
+Package: zurcoind
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- Bitcoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer
+ Zurcoin is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Zurcoin uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Bitcoin Core
+ and issuing money are carried out collectively by the network. Zurcoin Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides the daemon, bitcoind, and the CLI tool
- bitcoin-cli to interact with the daemon.
+ This package provides the daemon, zurcoind, and the CLI tool
+ zurcoin-cli to interact with the daemon.
 
-Package: bitcoin-qt
+Package: zurcoin-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- Bitcoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer
+ Zurcoin is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Zurcoin uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Bitcoin Core
+ and issuing money are carried out collectively by the network. Zurcoin Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides Bitcoin-Qt, a GUI for Bitcoin based on Qt.
+ This package provides Zurcoin-Qt, a GUI for Zurcoin based on Qt.
 
-Package: bitcoin-tx
+Package: zurcoin-tx
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer digital currency - standalone transaction tool
- Bitcoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Bitcoin uses peer-to-peer
+ Zurcoin is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Zurcoin uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Bitcoin Core
+ and issuing money are carried out collectively by the network. Zurcoin Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides bitcoin-tx, a command-line transaction creation
- tool which can be used without a bitcoin daemon.  Some means of
+ This package provides zurcoin-tx, a command-line transaction creation
+ tool which can be used without a zurcoin daemon.  Some means of
  exchanging minimal transaction data with peers is still required.

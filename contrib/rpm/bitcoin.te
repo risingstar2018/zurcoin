@@ -1,4 +1,4 @@
-policy_module(bitcoin, 1.100.1)
+policy_module(zurcoin, 1.100.1)
 
 ########################################
 #
@@ -28,7 +28,7 @@ corenet_port(bitcoin_port_t)
 
 ########################################
 #
-# bitcoin local policy
+# zurcoin local policy
 #
 allow bitcoin_t self:process { fork };
 

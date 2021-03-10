@@ -1,11 +1,11 @@
 Sample configuration files for:
 
-SystemD: bitcoind.service
-Upstart: bitcoind.conf
-OpenRC:  bitcoind.openrc
-         bitcoind.openrcconf
-CentOS:  bitcoind.init
-OS X:    org.bitcoin.bitcoind.plist
+SystemD: zurcoind.service
+Upstart: zurcoind.conf
+OpenRC:  zurcoind.openrc
+         zurcoind.openrcconf
+CentOS:  zurcoind.init
+OS X:    org.zurcoin.zurcoind.plist
 
 have been made available to assist packagers in creating node packages here.
 

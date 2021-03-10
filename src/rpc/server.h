@@ -136,7 +136,7 @@ public:
 };
 
 /**
- * Bitcoin RPC command dispatcher.
+ * Zurcoin RPC command dispatcher.
  */
 class CRPCTable
 {

@@ -1,15 +1,15 @@
 [Unit]
-Description=Bitcoin's distributed currency daemon
+Description=Zurcoin's distributed currency daemon
 After=network.target
 
 [Service]
-User=bitcoin
-Group=bitcoin
+User=zurcoin
+Group=zurcoin
 
 Type=forking
-PIDFile=/var/lib/bitcoind/bitcoind.pid
-ExecStart=/usr/bin/bitcoind -daemon -pid=/var/lib/bitcoind/bitcoind.pid \
--conf=/etc/bitcoin/bitcoin.conf -datadir=/var/lib/bitcoind -disablewallet
+PIDFile=/var/lib/zurcoind/zurcoind.pid
+ExecStart=/usr/bin/zurcoind -daemon -pid=/var/lib/zurcoind/zurcoind.pid \
+-conf=/etc/zurcoin/zurcoin.conf -datadir=/var/lib/zurcoind -disablewallet
 
 Restart=always
 PrivateTmp=true
