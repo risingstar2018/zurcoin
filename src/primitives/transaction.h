@@ -13,6 +13,7 @@
 #include <uint256.h>
 
 static const int SERIALIZE_TRANSACTION_NO_WITNESS = 0x40000000;
+static const int32_t TXCOMMENT_VERSION = 2;
 
 /** An outpoint - a combination of a transaction hash and an index n into its vout */
 class COutPoint
@@ -232,6 +233,9 @@ inline void UnserializeTransaction(TxType& tx, Stream& s) {
         throw std::ios_base::failure("Unknown transaction optional data");
     }
     s >> tx.nLockTime;
+    if(tx.nVersion >= TXCOMMENT_VERSION) {
+        s >> tx.strTxComment;           
+    }       
 }
 
 template<typename Stream, typename TxType>
@@ -261,6 +265,9 @@ inline void SerializeTransaction(const TxType& tx, Stream& s) {
         }
     }
     s << tx.nLockTime;
+    if(tx.nVersion >= TXCOMMENT_VERSION) {
+        s << tx.strTxComment;           
+    }    
 }
 
 
@@ -288,6 +295,7 @@ public:
     const std::vector<CTxOut> vout;
     const int32_t nVersion;
     const uint32_t nLockTime;
+    const std::string strTxComment;    
 
 private:
     /** Memory only. */
@@ -370,6 +378,7 @@ struct CMutableTransaction
     std::vector<CTxOut> vout;
     int32_t nVersion;
     uint32_t nLockTime;
+    std::string strTxComment;    
 
     CMutableTransaction();
     explicit CMutableTransaction(const CTransaction& tx);
