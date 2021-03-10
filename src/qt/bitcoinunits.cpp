@@ -1,5 +1,5 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
-// Distributed under the MIT/X11 software license, see the accompanying
+// Copyright (c) 2011-2015 The Bitcoin Core developers
+// Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "bitcoinunits.h"
@@ -36,24 +36,13 @@ bool BitcoinUnits::valid(int unit)
     }
 }
 
-QString BitcoinUnits::id(int unit)
-{
-    switch(unit)
-    {
-    case BTC: return QString("zur");
-    case mBTC: return QString("mzur");
-    case uBTC: return QString("duzur");
-    default: return QString("???");
-    }
-}
-
 QString BitcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("ZUR");
-    case mBTC: return QString("mZUR");
-    case uBTC: return QString::fromUtf8("dμZUR");
+    case BTC: return QString("BTC");
+    case mBTC: return QString("mBTC");
+    case uBTC: return QString::fromUtf8("μBTC");
     default: return QString("???");
     }
 }
@@ -62,9 +51,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Zurs");
-    case mBTC: return QString("Milli-Zurs (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Deca-Micro-Zurs (1 / 1" THIN_SP_UTF8 "00" THIN_SP_UTF8 "000)");
+    case BTC: return QString("Bitcoins");
+    case mBTC: return QString("Milli-Bitcoins (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Micro-Bitcoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
@@ -73,10 +62,10 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case BTC:  return 100000;
-    case mBTC: return 100;
-    case uBTC: return 1;
-    default:   return 100000;
+    case BTC:  return 100000000;
+    case mBTC: return 100000;
+    case uBTC: return 100;
+    default:   return 100000000;
     }
 }
 
@@ -84,9 +73,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case BTC: return 5;
-    case mBTC: return 2;
-    case uBTC: return 0;
+    case BTC: return 8;
+    case mBTC: return 5;
+    case uBTC: return 2;
     default: return 0;
     }
 }
@@ -121,13 +110,6 @@ QString BitcoinUnits::format(int unit, const CAmount& nIn, bool fPlus, Separator
     return quotient_str + QString(".") + remainder_str;
 }
 
-
-// TODO: Review all remaining calls to BitcoinUnits::formatWithUnit to
-// TODO: determine whether the output is used in a plain text context
-// TODO: or an HTML context (and replace with
-// TODO: BtcoinUnits::formatHtmlWithUnit in the latter case). Hopefully
-// TODO: there aren't instances where the result could be used in
-// TODO: either context.
 
 // NOTE: Using formatWithUnit in an HTML context risks wrapping
 // quantities at the thousands separator. More subtly, it also results
