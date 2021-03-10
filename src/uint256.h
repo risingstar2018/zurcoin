@@ -42,8 +42,24 @@ public:
         memset(data, 0, sizeof(data));
     }
 
+    base_blob(uint64_t b)
+    {
+        data[0] = (unsigned int)b;
+        data[1] = (unsigned int)(b >> 32);
+        for (int i = 2; i < WIDTH; i++)
+            data[i] = 0;
+    }
+
+    base_blob& operator&=(const base_blob& b)
+    {
+        for (int i = 0; i < WIDTH; i++)
+            data[i] &= b.data[i];
+        return *this;
+    }
+
     inline int Compare(const base_blob& other) const { return memcmp(data, other.data, sizeof(data)); }
 
+    friend inline const base_blob operator&(const base_blob& a, const base_blob& b) { return base_blob(a) &= b; }
     friend inline bool operator==(const base_blob& a, const base_blob& b) { return a.Compare(b) == 0; }
     friend inline bool operator!=(const base_blob& a, const base_blob& b) { return a.Compare(b) != 0; }
     friend inline bool operator<(const base_blob& a, const base_blob& b) { return a.Compare(b) < 0; }
@@ -163,4 +179,24 @@ inline uint256 uint256S(const std::string& str)
     return rv;
 }
 
+class uint512 : public base_blob<512> {
+public:
+    uint512() {}
+    uint512(uint64_t b) : base_blob<512>(b) {}    
+    explicit uint512(const std::vector<unsigned char>& vch) : base_blob<512>(vch) {}
+    
+    uint256 trim256() const
+    {
+        uint256 result;
+        memcpy((void*)&result, (void*)data, 32);
+        return result;
+    } 
+};
+
+inline uint512 uint512S(const std::string& str)
+{
+    uint512 rv;
+    rv.SetHex(str);
+    return rv;
+}
 #endif // BITCOIN_UINT256_H
