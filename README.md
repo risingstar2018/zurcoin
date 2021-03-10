@@ -3,7 +3,7 @@ Zurcoin Core integration/staging tree
 
 [![Build Status](https://travis-ci.org/zurcoin/bitcoin.svg?branch=master)](https://travis-ci.org/zurcoin/zurcoin)
 
-https://bitcoincore.org
+https://zurcoin.org
 
 What is Zurcoin?
 ----------------
@@ -16,7 +16,7 @@ software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
 the Zurcoin Core software, see https://zurcoin.org/en/download, or read the
-[original whitepaper](https://bitcoincore.org/bitcoin.pdf).
+[original whitepaper](https://zurcoin.org/bitcoin.pdf).
 
 License
 -------
