@@ -123,7 +123,8 @@ public:
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
         // vSeeds.emplace_back("dnsseed.emzy.de"); // Stephan Oeste
-        vSeeds.push_back(CDNSSeedData("scrypt.ovh", "explorer.scrypt.ovh"));           
+        
+        vSeeds.push_back(CDNSSeedData("scrypt.ovh", "explorer.scrypt.ovh"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,69);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,9);
@@ -346,4 +347,4 @@ void UpdateRegtestBIP9Parameters(Consensus::DeploymentPos d, int64_t nStartTime,
 {
     regTestParams.UpdateBIP9Parameters(d, nStartTime, nTimeout);
 }
- 
+
