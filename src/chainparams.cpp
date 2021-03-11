@@ -123,7 +123,7 @@ public:
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
         // vSeeds.emplace_back("dnsseed.emzy.de"); // Stephan Oeste
-        
+
         vSeeds.push_back(CDNSSeedData("scrypt.ovh", "explorer.scrypt.ovh"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,69);
