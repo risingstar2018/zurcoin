@@ -303,8 +303,8 @@ private:
     const uint256 m_witness_hash;
 
     uint256 ComputeHash() const;
+    void UpdateHash() const;    
     uint256 ComputeWitnessHash() const;
-    void UpdateHash() const;
 
 public:
     /** Construct a CTransaction that qualifies as IsNull() */
