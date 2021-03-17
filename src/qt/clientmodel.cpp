@@ -265,5 +265,5 @@ void ClientModel::unsubscribeFromCoreSignals()
     uiInterface.NotifyAlertChanged.disconnect(boost::bind(NotifyAlertChanged, this));
     uiInterface.BannedListChanged.disconnect(boost::bind(BannedListChanged, this));
     uiInterface.NotifyBlockTip.disconnect(boost::bind(BlockTipChanged, this, boost::placeholders::_1, boost::placeholders::_2, false));
-    uiInterface.NotifyHeaderTip.disconnect(boost::bind(BlockTipChanged, this, boost::placeholders::_1, boost::placeholders::boost::placeholders::_2, true));
+    uiInterface.NotifyHeaderTip.disconnect(boost::bind(BlockTipChanged, this, boost::placeholders::_1, boost::placeholders::_2, true));
 }
