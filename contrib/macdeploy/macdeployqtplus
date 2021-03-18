@@ -792,6 +792,7 @@ if config.dmg is not None:
         except subprocess.CalledProcessError as e:
             sys.exit(e.returncode)
         
+        print(output)
         m = re.search(r"/Volumes/(.+$)", output)
         disk_root = m.group(0)
         disk_name = m.group(1)
