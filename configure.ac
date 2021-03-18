@@ -323,7 +323,7 @@ case $host in
            LIBS="$LIBS -L/opt/local/lib/db48"
          fi
        fi
-
+       AC_PATH_PROGS([RSVG_CONVERT], [rsvg-convert rsvg],rsvg-convert) 
        AC_CHECK_PROG([BREW],brew, brew)
        if test x$BREW = xbrew; then
          dnl These Homebrew packages may be keg-only, meaning that they won't be found
