@@ -792,7 +792,8 @@ if config.dmg is not None:
         except subprocess.CalledProcessError as e:
             sys.exit(e.returncode)
         
-        m = re.search(r"/Volumes/(.+$)", output)
+        output = output.decode('utf-8')
+        m = re.search("/Volumes/(.+$)", output)
         disk_root = m.group(0)
         disk_name = m.group(1)
         
@@ -869,7 +870,7 @@ if config.dmg is not None:
             print(s)
 
         p = subprocess.Popen(['osascript', '-'], stdin=subprocess.PIPE)
-        p.communicate(input=s)
+        p.communicate(input=s.encode('utf-8'))
         if p.returncode:
             print("Error running osascript.")
 
